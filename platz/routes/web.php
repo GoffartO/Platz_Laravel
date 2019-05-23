@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Routes par défaut
+Route::get('/', 'RessourcesController@index')->name('homepage');
 
-
+// Routes Voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
