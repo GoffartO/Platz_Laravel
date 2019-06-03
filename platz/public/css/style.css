@@ -155,7 +155,7 @@ body,html{
 	opacity:0;
 }
 
-.navbar{
+.navibar{
 	position:relative;
 	width:1200px;
 	left:50%;
@@ -225,7 +225,8 @@ body,html{
 	height:auto;
 }
 
-.container,.container-footer {
+/* .container, */
+.container-footer {
     position:relative;
     width: 1200px;
     margin-left:-600px;
@@ -706,7 +707,7 @@ body,html{
 /* Others wide screen */
 
 @media only screen and (max-width: 1200px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:940px;
 	margin-left:-465px;
 }
@@ -722,7 +723,7 @@ body,html{
 /* Small viewports � Old monitors, netbooks, tablets (landscape), etc. */
 
 @media only screen and (max-width: 965px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:835px;
 	margin-left:-417.5px;
 }
@@ -760,7 +761,7 @@ body,html{
 /* Smaller viewports � more tablets, old monitors */
 
 @media only screen and (max-width: 860px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:715px;
 	margin-left:-357.5px;
 }
@@ -772,7 +773,7 @@ body,html{
 /* Even smaller viewports � more tablets, etc. */
 
 @media only screen and (max-width: 740px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:585px;
 	margin-left:-292.5px;
 }
@@ -793,7 +794,7 @@ body,html{
 /* Mobile phones (Landscape) and Tablets (Portrait) */
 
 @media only screen and (max-width: 610px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:455px;
 	margin-left:-227.5px;
 }
@@ -816,7 +817,7 @@ body,html{
 /* Mobile phones (Landscape) and Tablets (Portrait) */
 
 @media only screen and (max-width: 480px) {
-#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
 	width:295px;
 	margin-left:-147.5px;
 }
@@ -838,4 +839,41 @@ body,html{
 
 @media only screen and (max-width: 320px) {
 
+}
+
+.menuConnexion {
+  position:absolute;
+	width: auto;
+	height: auto;
+	right:15px;
+	top:20.5px;
+  font-size: 1.1em;
+  font-family: 'Roboto',sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  /* flex-direction: column; */
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.menuConnexion a {
+  color: lightgray;
+  padding: .5em 1em;
+}
+.menuConnexion a:hover {
+  color: #fff;
+}
+.marge {
+  margin-top: 2em;
+}
+.espace {
+  padding: 2em 0;
+}
+.dropdown-menu a {
+  color: gray;
+  padding: .5em 1em;
+  vertical-align: middle;
+}
+.dropdown-menu a:hover {
+  color: #000;
 }
