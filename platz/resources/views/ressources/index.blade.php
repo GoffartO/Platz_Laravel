@@ -15,7 +15,7 @@
       @foreach ($ressources as $ressource)
         <figure class="white">
           <a href="details.html">
-            <img src="storage/{{ $ressource->image }}" alt="" /> 
+            <img src="storage/{{ $ressource->image }}" alt="" />
             <dl>
               <dt>{{ $ressource->titre }}</dt>
               <dd>{{ $ressource->texte }}</dd>
@@ -29,6 +29,17 @@
       @endforeach
 
     </section>
+  </div>
+</div>
+
+<div id="wrapper-oldnew">
+  <div class="oldnew">
+    <div class="wrapper-oldnew-prev">
+      <div id="oldnew-prev"></div>
+    </div>
+    <div class="wrapper-oldnew-next">
+      <div id="oldnew-next"></div>
+    </div>
   </div>
 </div>
 @stop
