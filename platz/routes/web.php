@@ -23,3 +23,6 @@ Route::get('/', 'RessourcesController@index')->name('homepage');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+// Routes Authentication
+Auth::routes();

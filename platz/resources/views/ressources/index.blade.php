@@ -8,7 +8,6 @@
 
 @section('contenu')
 
-<link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'>
 <div class="container object">
   <div id="main-container-image">
     <section class="work">
@@ -30,6 +29,17 @@
       @endforeach
 
     </section>
+  </div>
+</div>
+
+<div id="wrapper-oldnew">
+  <div class="oldnew">
+    <div class="wrapper-oldnew-prev">
+      <div id="oldnew-prev"></div>
+    </div>
+    <div class="wrapper-oldnew-next">
+      <div id="oldnew-next"></div>
+    </div>
   </div>
 </div>
 @stop
