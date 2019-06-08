@@ -14,6 +14,11 @@
 // Routes par défaut
 Route::get('/', 'RessourcesController@index')->name('homepage');
 
+// Route ressources/show
+ Route::get('/{id}', 'RessourcesController@show')
+    ->name('ressources.show')
+    ->where('id', '[0-9]+');
+    
 // Routes Voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
