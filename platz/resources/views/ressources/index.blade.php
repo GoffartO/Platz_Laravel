@@ -8,14 +8,15 @@
 
 @section('contenu')
 
+<link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'>
 <div class="container object">
   <div id="main-container-image">
     <section class="work">
 
       @foreach ($ressources as $ressource)
         <figure class="white">
-          <a href="details.html">
-            <img src="storage/{{ $ressource->image }}" alt="" /> 
+          <a href="{{ route('ressources.show', $ressource->id)}}">
+            <img src="storage/{{ $ressource->image }}" alt="" />
             <dl>
               <dt>{{ $ressource->titre }}</dt>
               <dd>{{ $ressource->texte }}</dd>
