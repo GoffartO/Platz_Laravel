@@ -6,11 +6,16 @@
 
 @extends('templates.app')
 
-@section('contenu')
+@section('title')
+  Free Grid Wordpress Theme
+@stop
 
-<div class="container object">
+@section('contenu')
+  {{-- <link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'> --}}
+
+<div class="container_ object">
   <div id="main-container-image">
-    <section class="work">
+    <section class="work_">
 
       @foreach ($ressources as $ressource)
         <figure class="white">
@@ -18,7 +23,7 @@
             <img src="storage/{{ $ressource->image }}" alt="" />
             <dl>
               <dt>{{ $ressource->titre }}</dt>
-              <dd>{{ $ressource->texte }}</dd>
+              <dd>{{ substr($ressource->texte, 0, 120) }}...</dd>
             </dl>
           </a>
           <div id="wrapper-part-info">

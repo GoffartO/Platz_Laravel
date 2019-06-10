@@ -111,7 +111,7 @@ body,html{
 	float:left;
 	width:105%;
 	height:65px;
-	background-color:#2E2D30;
+	background-color:#202020;
 	opacity:0;
 }
 
@@ -125,8 +125,9 @@ body,html{
 
 .logo{
 	position:absolute;
-    margin-top:13.5px;
+  margin-top:13.5px;
 	left:15px;
+  cursor:pointer;
 }
 
 #stripes{
@@ -155,7 +156,7 @@ body,html{
 	opacity:0;
 }
 
-.navibar{
+.navbar_{
 	position:relative;
 	width:1200px;
 	left:50%;
@@ -225,8 +226,7 @@ body,html{
 	height:auto;
 }
 
-/* .container, */
-.container-footer {
+.container_,.container-footer {
     position:relative;
     width: 1200px;
     margin-left:-600px;
@@ -298,46 +298,46 @@ body,html{
 /*----------------------------*/
 
 #main-container-image {
-    float:left;
-    width:100%;
-    height:auto;
+  float:left;
+  width:100%;
+  height:auto;
 	background-color:#F4F4F4;
 	margin-top:25px;
 	opacity:0;
 }
 
-.work figure {
-    float:left;
+.work_ figure {
+  float:left;
 	width:calc(100% / 4 - 30px);
-    height:auto;
-    line-height:auto;
-    position: relative;
-    padding: 0 !important;
-    margin: 15px;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
+  height:auto;
+  line-height:auto;
+  position: relative;
+  padding: 0 !important;
+  margin: 15px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
 	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
 	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
 	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
 	background-color:#FFF;
 }
 
-.work figure.white dl{
+.work_ figure.white dl{
     background: #FFF;
 }
 
 
-.work figure a img {
+.work_ figure a img {
     height: 90%;
     width: 90%;
 	margin-left:5%;
 	margin-top:5%;
 }
 
-.work figure dl {
+.work_ figure dl {
     opacity: 0;
     position: absolute;
     left: 0;
@@ -355,11 +355,11 @@ body,html{
     -ms-transition: all 0.3s ease-in-out;
 }
 
-.work figure:hover dl {
+.work_ figure:hover dl {
     opacity: 1;
 }
 
-.work figure dl dt {
+.work_ figure dl dt {
 	font-family: Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -376,7 +376,7 @@ body,html{
 
 }
 
-.work figure dl dd {
+.work_ figure dl dd {
     margin-left: 0;
 	font-family: Helvetica, sans-serif;
     font-size: 12px;
@@ -419,7 +419,7 @@ body,html{
 	margin-top:8px;
 }
 
-.part-info-image img{width:100%;height:100%;}
+.part-info-image img{width:28px;height:28px;}
 
 /*----------------------------*/
 /* RESPONSIVE MENU LIST  */
@@ -602,7 +602,7 @@ body,html{
 }
 
 #tip_search_input{
-    font: 16px/1.6 Helvetica, sans-serif;
+    font: 16px/1.6 'Roboto', sans-serif;
 	color: #686868;
 	padding: 4px 4px 4px 46px;
 	width: 170px;
@@ -653,7 +653,7 @@ body,html{
 .copy-text{
 	float:left;
 	text-align:left;
-	font-family: Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-size: 15px;
 	height:70px;
 	line-height:70px;
@@ -715,9 +715,9 @@ body,html{
 	display:none;
 }
 
-.work figure {
+/* .work_ figure {
 	width:calc(100% / 3 - 30px);
-}
+} */
 }
 
 /* Small viewports � Old monitors, netbooks, tablets (landscape), etc. */
@@ -786,9 +786,9 @@ body,html{
 #main-container-menu {
 	display:block;
 }
-.work figure {
+/* .work_ figure {
 	width:calc(100% / 2 - 30px);
-}
+} */
 }
 
 /* Mobile phones (Landscape) and Tablets (Portrait) */
@@ -821,7 +821,7 @@ body,html{
 	width:295px;
 	margin-left:-147.5px;
 }
-.work figure {
+.work_ figure {
 	width:calc(100% - 30px);
 }
 .wrapper-navbouton{

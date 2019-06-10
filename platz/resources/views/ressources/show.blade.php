@@ -12,9 +12,9 @@
 
 @section('contenu')
 
-<link href='{{ asset('css/details.css')}}' rel='stylesheet' type='text/css'>
+{{-- <link href='{{ asset('css/details.css')}}' rel='stylesheet' type='text/css'> --}}
 <div id="wrapper-container">
-  <div class="container object">
+  <div class="container_ object">
 
     <div id="main-container-image">
 

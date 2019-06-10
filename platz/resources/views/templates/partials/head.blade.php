@@ -5,7 +5,7 @@
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Platz - Free Grid Wordpress Theme</title>
+  <title>Platz - @yield('title')</title>
 
   <!-- Behavioral Meta Data -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,6 +19,7 @@
   <!-- Styles -->
   <link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href='{{ asset('css/details.css')}}' rel='stylesheet' type='text/css'>
   <script src="{{ asset('js/app.js') }}"></script>
 
 </head>
