@@ -1,5 +1,9 @@
 @extends('templates.app')
 
+@section('title')
+  Connexion
+@stop
+
 @section('contenu')
 <div class="container">
     <div class="row justify-content-center marge">

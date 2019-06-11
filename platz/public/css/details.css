@@ -308,7 +308,7 @@ background-color:#FFFFFF;
   float: left;
   width: 52.5%;
 }
-.white img {
+.white > img {
 width: 100%;
 }
 
@@ -1040,8 +1040,8 @@ float:left;
 margin-bottom:17px;
 }
 #wrapper-part-info .part-info-image img{
-height:92%;
-width:92%;
+/* height:92%;
+width:92%; */
 margin-left:4%;
 }
 .work figure img {
@@ -1090,8 +1090,8 @@ float:left;
 margin-bottom:15px;
 }
 #wrapper-part-info .part-info-image img{
-height:90%;
-width:90%;
+/* height:90%;
+width:90%; */
 margin-left:5%;
 }
 .work figure img {

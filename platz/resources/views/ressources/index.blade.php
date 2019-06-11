@@ -11,7 +11,6 @@
 @stop
 
 @section('contenu')
-  {{-- <link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'> --}}
 
 <div class="container_ object">
   <div id="main-container-image">
@@ -19,15 +18,16 @@
 
       @foreach ($ressources as $ressource)
         <figure class="white">
-          <a href="{{ route('ressources.show', $ressource->id)}}">
-            <img src="storage/{{ $ressource->image }}" alt="" />
+          <a href="{{ route('ressources.show', $ressource->id) }}">
+            {{-- <img src="storage/{{ $ressource->image }}" alt="{{ $ressource->titre }}" /> --}}
+            <img src="{{asset('storage/'.$ressource->image)}}" alt="{{ $ressource->titre }}" />
             <dl>
               <dt>{{ $ressource->titre }}</dt>
               <dd>{{ substr($ressource->texte, 0, 120) }}...</dd>
             </dl>
           </a>
           <div id="wrapper-part-info">
-            <div class="part-info-image"><img src="img/icon-psd.svg" alt="" width="28" height="28"/></div>
+            <div class="part-info-image"><img src="{{asset('storage/'.$ressource->categories->icone) }}" alt="{{ $ressource->categories->nom }}" /></div>
             <div id="part-info">{{ $ressource->titre }}</div>
           </div>
         </figure>
@@ -39,11 +39,8 @@
 
 <div id="wrapper-oldnew">
   <div class="oldnew">
-    <div class="wrapper-oldnew-prev">
-      <div id="oldnew-prev"></div>
-    </div>
-    <div class="wrapper-oldnew-next">
-      <div id="oldnew-next"></div>
+    <div class="paginate">
+      {{ $ressources->links()}}
     </div>
   </div>
 </div>
