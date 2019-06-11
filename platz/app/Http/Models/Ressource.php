@@ -10,11 +10,10 @@
         protected $table = 'ressources';
 
         public function users(){
-        return $this->belongsTo('\App\User', 'user');
+          return $this->belongsTo('\App\User', 'user');
+        }
 
-      }
-      public function categories(){
-        return $this->belongsTo('\App\Categorie', 'categorie');
-
-      }
+        public function categories(){
+          return $this->belongsTo('\App\Categorie', 'categorie');
+        }
    }

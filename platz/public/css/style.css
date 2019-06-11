@@ -196,8 +196,28 @@ body,html{
 
 #fleche-nav-2,#fleche-nav-3{opacity:0.5;}
 
-#wrapper-bouton-icon{display:block;}
-#bouton-ai,#bouton-psd,#bouton-photo,#bouton-font,#bouton-theme,#bouton-premium{
+#wrapper-bouton-icon{
+  display:block;
+}
+
+#wrapper-bouton-icon li {
+	float:right;
+	width:28px;
+	height:28px;
+	/* margin-top:16px; */
+	margin-right:15px;
+	cursor:pointer;
+	opacity:1;
+	 transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+
+#wrapper-bouton-icon li:hover {opacity:0.5;transform: scale(1.2);}
+
+/* #bouton-ai,#bouton-psd,#bouton-photo,#bouton-font,#bouton-theme,#bouton-premium{
 	float:right;
 	width:28px;
 	height:28px;
@@ -210,11 +230,11 @@ body,html{
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
-}
+} */
 
-#bouton-ai:hover,#bouton-psd:hover,#bouton-photo:hover,#bouton-font:hover,#bouton-theme:hover,#bouton-premium:hover{opacity:0.5;transform: scale(1.2);}
+/* #bouton-ai:hover,#bouton-psd:hover,#bouton-photo:hover,#bouton-font:hover,#bouton-theme:hover,#bouton-premium:hover{opacity:0.5;transform: scale(1.2);} */
 
-#bouton-ai img,#bouton-psd img,#bouton-photo img,#bouton-font img,#bouton-theme img,#bouton-premium img{width:100%;height:100%;}
+/* #bouton-ai img,#bouton-psd img,#bouton-photo img,#bouton-font img,#bouton-theme img,#bouton-premium img{width:100%;height:100%;} */
 
 /*----------------------------*/
 /* MAIN DIV */
@@ -419,19 +439,22 @@ body,html{
 	margin-top:8px;
 }
 
-.part-info-image img{width:28px;height:28px;}
+.part-info-image img {
+  width:28px;
+  height:28px;
+}
 
 /*----------------------------*/
 /* RESPONSIVE MENU LIST  */
 /*----------------------------*/
 
-#main-premium-ressource,#main-themes,#main-psd,#main-ai,#main-font,#main-photo{
+#main-premium-ressource{
 	float:left;
 	width:100%;
 	min-height:36px;
 }
 
-.premium-ressource,.themes,.psd,.ai,.font,.photo{
+.categorieMenu{
 	position:relative;
 	text-align:center;
 	font-family: Helvetica, sans-serif;
@@ -443,16 +466,16 @@ body,html{
     -moz-osx-font-smoothing: grayscale;
 }
 
-.premium-ressource a,.themes a,.psd a,.ai a,.font a,.photo a{
+.categorieMenu a{
 	transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
 }
 
-.premium-ressource a,.themes a,.psd a,.photo a,.font a,.ai a{color:#999;}
+.categorieMenu a{color:#999;}
 
-.premium-ressource a:hover{color:#CCC;}
+.categorieMenu a:hover{color:#CCC;}
 .themes a:hover{color:#66CC7A;}
 .psd a:hover{color:#2B9ED8;}
 .photo a:hover{color:#56514C;}
@@ -516,6 +539,58 @@ body,html{
 
 #oldnew-next{background: url('../img/next.svg') no-repeat;margin-left:25px;float:left;}
 #oldnew-prev{background: url('../img/prev.svg') no-repeat;margin-right:25px;float:right;}
+
+.paginate {
+  text-align: center;
+}
+.paginate ul {
+  display: inline-flex;
+}
+.paginate ul {
+  height: 1.5em;
+}
+
+#wrapper-oldnew > div > div.paginate > ul > li > a {
+  background: none;
+  color: #A1A1A1;
+  font-size: 1.5em;
+  margin: 0 .2em;
+}
+#wrapper-oldnew > div > div.paginate > ul > li.page-item.disabled > span {
+  background: none;
+  border-radius: 50%;
+  border-color: #E1E1E1;
+  color: #E1E1E1;
+  font-size: 1.5em;
+  width:2em;
+  margin: 0 1em;
+
+}
+#wrapper-oldnew > div > div.paginate > ul > li > a:hover {
+  transform: scale(1.2, 1.2);
+}
+
+#wrapper-oldnew > div > div.paginate > ul > li:first-child a,
+#wrapper-oldnew > div > div.paginate > ul > li:last-child a {
+  background: none;
+  border-radius: 50%;
+  border-color: #A1A1A1;
+  color: #A1A1A1;
+  font-size: 1.5em;
+  width:2em;
+  margin: 0 1em;
+}
+
+#wrapper-oldnew > div > div.paginate > ul > li.page-item.active > span {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.5em;
+  margin: 0 .2em;
+}
+#wrapper-oldnew > div > div > ul > li:not(:first-child):not(:last-child) > a {
+  border: none;
+}
 
 /*----------------------------*/
 /* FOOTER */
@@ -707,7 +782,7 @@ body,html{
 /* Others wide screen */
 
 @media only screen and (max-width: 1200px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:940px;
 	margin-left:-465px;
 }
@@ -715,15 +790,15 @@ body,html{
 	display:none;
 }
 
-/* .work_ figure {
+.work_ figure {
 	width:calc(100% / 3 - 30px);
-} */
+}
 }
 
 /* Small viewports � Old monitors, netbooks, tablets (landscape), etc. */
 
 @media only screen and (max-width: 965px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:835px;
 	margin-left:-417.5px;
 }
@@ -761,7 +836,7 @@ body,html{
 /* Smaller viewports � more tablets, old monitors */
 
 @media only screen and (max-width: 860px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:715px;
 	margin-left:-357.5px;
 }
@@ -773,7 +848,7 @@ body,html{
 /* Even smaller viewports � more tablets, etc. */
 
 @media only screen and (max-width: 740px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:585px;
 	margin-left:-292.5px;
 }
@@ -786,15 +861,15 @@ body,html{
 #main-container-menu {
 	display:block;
 }
-/* .work_ figure {
+.work_ figure {
 	width:calc(100% / 2 - 30px);
-} */
+}
 }
 
 /* Mobile phones (Landscape) and Tablets (Portrait) */
 
 @media only screen and (max-width: 610px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:455px;
 	margin-left:-227.5px;
 }
@@ -817,7 +892,7 @@ body,html{
 /* Mobile phones (Landscape) and Tablets (Portrait) */
 
 @media only screen and (max-width: 480px) {
-#main-header,.navibar,.container,.container-footer,.thank,.oldnew,.copyright {
+#main-header,.navbar_,.container,.container-footer,.thank,.oldnew,.copyright,.container_ {
 	width:295px;
 	margin-left:-147.5px;
 }
@@ -858,10 +933,11 @@ body,html{
 }
 .menuConnexion a {
   color: lightgray;
-  padding: .5em 1em;
+  padding: .5em 0 .5em 2em;
 }
 .menuConnexion a:hover {
   color: #fff;
+  text-decoration: none;
 }
 .marge {
   margin-top: 2em;

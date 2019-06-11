@@ -7,15 +7,18 @@
        class RessourcesController extends Controller {
 
          public function index(){
-            $ressources = RessourcesMdl::get();
+             if (request()->has('categorie')) {
+               $ressources = RessourcesMdl::with('categories')->where('categorie', request('categorie'))->orderBy('date', 'desc')->paginate(4)->appends('categorie', request('categorie'));
+             } else {
+               $ressources = RessourcesMdl::with('categories')->orderBy('date', 'desc')->paginate(4);
+             }
             return View::make('ressources.index', ['ressources' => $ressources ]);
          }
 
          public function show($id = 1){
-
             $ressource = RessourcesMdl::with('users')->find($id);
-            //dd($ressource);
-
             return View::make('ressources.show', ['ressource' => $ressource ]);
          }
+
+
        }

@@ -12,7 +12,6 @@
 
 @section('contenu')
 
-{{-- <link href='{{ asset('css/details.css')}}' rel='stylesheet' type='text/css'> --}}
 <div id="wrapper-container">
   <div class="container_ object">
 
@@ -21,14 +20,12 @@
               <div class="title-item">
                 <div class="title-icon"></div>
                   <div class="title-text">{{ $ressource->titre }}</div>
-                  <?php
-                //  dd($ressource->users->name);
-                ?>
+
                   <div class="title-text-2">{{ date('d-m-Y', strtotime($ressource->from_date))}} by {{ $ressource->users->name}}</div>
               </div>
       <div class="work">
         <figure class="white">
-             <img src="storage/{{ $ressource->image }}" alt="" />
+             <img src="{{asset('storage/'.$ressource->image) }}" alt="{{ $ressource->titre }}" />
 
           </figure>
 

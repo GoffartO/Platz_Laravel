@@ -1,11 +1,15 @@
-@extends('layouts.app')
+@extends('templates.app')
 
-@section('content')
+@section('title')
+  A
+@stop
+
+@section('contenu')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+    <div class="row justify-content-center marge">
+        <div class="col-md-12">
+            <div class="card espace">
+                {{-- <div class="card-header">{{ __('Verify Your Email Address') }}</div> --}}
 
                 <div class="card-body">
                     @if (session('resent'))

@@ -18,7 +18,7 @@ Route::get('/', 'RessourcesController@index')->name('homepage');
  Route::get('/{id}', 'RessourcesController@show')
     ->name('ressources.show')
     ->where('id', '[0-9]+');
-    
+
 // Routes Voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -26,3 +26,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 // Routes Authentication
 Auth::routes();
+
+/* Vue composer */
+
+View::composer(['categories.menu','categories.menuIcon'], function($view){
+  $view->with('categories', App\Http\Models\Categorie::all());
+});
