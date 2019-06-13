@@ -52,16 +52,7 @@
                       <div class="text-download"><a href="#"><b>Download</b></a></div>
                   </div>
 
-                  <div class="wrapper-morefrom">
-                    <div class="text-morefrom">More from .psd</div>
-                      <div class="image-morefrom">
-                        <a href="#"><div class="image-morefrom-1"><img src="img/psd-1.jpg" alt="" width="430" height="330"/></div></a>
-                          <a href="#"><div class="image-morefrom-2"><img src="img/psd-2.jpg" alt="" width="430" height="330"/></div></a>
-                          <a href="#"><div class="image-morefrom-3"><img src="img/psd-3.jpg" alt="" width="430" height="330"/></div></a>
-                          <a href="#"><div class="image-morefrom-4"><img src="img/psd-6.jpg" alt="" width="430" height="330"/></div></a>
-                      </div>
-                  </div>
-              </div>
+                  @include('ressources.more', ['ressource'=>$ressource,'ressourcesRelated'=>$ressourcesRelated])
                 <div class="post-reply">
                     <div id="title-post-send">
                         <hr/><h2>Your comments</h2>
