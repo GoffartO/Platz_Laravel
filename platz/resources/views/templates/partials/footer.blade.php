@@ -27,9 +27,7 @@
     <div id="row-4f">
       <div class="text-row-4f"><span style="font-weight:600;font-size:15px;color:#666;line-height:250%;text-transform:uppercase;letter-spacing:1.5px;">Newsletter</span><br>You will be informed monthly about the latest content avalaible.</div>
       <div id="main_tip_newsletter">
-        <form>
-          <input type="text" name="newsletter" id="tip_newsletter_input" list="newsletter" autocomplete=off required>
-        </form>
+        @include('newsletters.form')
       </div>
     </div>
 
