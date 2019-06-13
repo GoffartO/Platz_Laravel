@@ -20,8 +20,10 @@
 
         <!-- CONTENU -->
         <main>
+          @include('flash')
           @section('contenu')
           @show
+
         </main>
 
         <!-- Footer -->

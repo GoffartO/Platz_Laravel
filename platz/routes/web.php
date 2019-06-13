@@ -19,6 +19,9 @@ Route::get('/', 'RessourcesController@index')->name('homepage');
     ->name('ressources.show')
     ->where('id', '[0-9]+');
 
+// ROUTE NEWSLETTER
+Route::post('/newsletters/store', 'NewslettersController@store')->name('newsletters.store');
+
 // Routes Voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
