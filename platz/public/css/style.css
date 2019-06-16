@@ -555,6 +555,7 @@ body,html{
   color: #A1A1A1;
   font-size: 1.5em;
   margin: 0 .2em;
+
 }
 #wrapper-oldnew > div > div.paginate > ul > li.page-item.disabled > span {
   background: none;
@@ -567,7 +568,12 @@ body,html{
 
 }
 #wrapper-oldnew > div > div.paginate > ul > li > a:hover {
-  transform: scale(1.2, 1.2);
+  color: #666;
+}#wrapper-oldnew > div > div.paginate > ul > li:first-child a:hover,
+#wrapper-oldnew > div > div.paginate > ul > li:last-child a:hover {
+  background: #F2F2F2;
+  border-color: #666;
+  color: #666;
 }
 
 #wrapper-oldnew > div > div.paginate > ul > li:first-child a,
