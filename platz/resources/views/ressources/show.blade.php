@@ -18,10 +18,10 @@
     <div id="main-container-image">
 
               <div class="title-item">
-                <div class="title-icon"></div>
+                <div class="title-icon"><img src="{{asset('storage/'.$ressource->categories->icone) }}" /></div>
                   <div class="title-text">{{ $ressource->titre }}</div>
 
-                  <div class="title-text-2">{{ date('d-m-Y', strtotime($ressource->from_date))}} by {{ $ressource->users->name}}</div>
+                  <div class="title-text-2">{{ date('d-m-Y', strtotime($ressource->date))}} by {{ $ressource->users->name}}</div>
               </div>
       <div class="work">
         <figure class="white">
@@ -33,7 +33,7 @@
 
 
                 <div class="wrapper-file">
-                    <div class="icon-file"><img src="{{asset('img/icon-psdfile.svg')}}" alt="" width="21" height="21"/></div>
+                    <div class="icon-file"><img src="{{asset('storage/'.$ressource->categories->icone) }}" alt="" width="21" height="21"/></div>
                       <div class="text-file"> {{ $ressource->categories->nom }}</div>
                   </div>
 

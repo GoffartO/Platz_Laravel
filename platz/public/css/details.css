@@ -353,7 +353,14 @@ margin-right:25px;
 .icon-desc{margin-top:7px;}
 .icon-download{margin-top:6px;margin-left:3px;}
 
-.icon-view img,.icon-file img,.icon-weight img,.icon-desc img,.icon-download img{height:100%;width:100%;}
+.icon-view img,.icon-weight img,.icon-desc img,.icon-download img{height:100%;width:100%;}
+.icon-file img {
+  width: 21px;
+  height: 21px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
 
 .text-view,.text-file,.text-weight,.text-desc,.text-download{
 float:left;
@@ -427,8 +434,18 @@ transition: all 0.2s ease-in-out;
 cursor:pointer;
 }
 
-.image-morefrom-1,.image-morefrom-3{margin-right:5%;}
-.image-morefrom-1,.image-morefrom-2{margin-bottom:12.5px;}
+#main-container-image > div.work > div > div.wrapper-morefrom > div.image-morefrom > a:nth-child(1) > div,
+#main-container-image > div.work > div > div.wrapper-morefrom > div.image-morefrom > a:nth-child(3) > div {
+  margin-right:5%;
+}
+#main-container-image > div.work > div > div.wrapper-morefrom > div.image-morefrom > a:nth-child(1) > div,
+#main-container-image > div.work > div > div.wrapper-morefrom > div.image-morefrom > a:nth-child(2) > div {
+  margin-bottom:12.5px;
+}
+
+/* .image-morefrom-1,.image-morefrom-3{margin-right:5%;}
+.image-morefrom-1,.image-morefrom-2{margin-bottom:12.5px;} */
+
 
 .image-morefrom-1 img,.image-morefrom-2 img,.image-morefrom-3 img,.image-morefrom-4 img{
 width:85%;
@@ -599,8 +616,12 @@ margin-bottom:10px;
 float:left;
 width:68px;
 height:68px;
-background: url('../img/title-icon-ps.svg') no-repeat;
+/* background: url('../img/title-icon-ps.svg') no-repeat; */
 margin-right:20px;
+}
+.title-icon img {
+  width: 68px;
+  height: 68px;
 }
 
 .title-text{

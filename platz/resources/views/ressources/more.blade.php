@@ -6,7 +6,7 @@
 
 
 <div class="wrapper-morefrom">
-  <div class="text-morefrom">More from .psd</div>
+  <div class="text-morefrom">More from {{ $ressource->categories->nom }}</div>
 
     <div class="image-morefrom">
       @foreach ($ressourcesRelated as $ressourceRelated)
