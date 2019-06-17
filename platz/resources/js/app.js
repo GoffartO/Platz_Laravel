@@ -1,32 +1,39 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+document.addEventListener("DOMContentLoaded", function(event) {
+  $.ajaxSetup({
+          headers: {
 
-require('./bootstrap');
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
 
-window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+  $("#contact").submit(function(e){
+  e.preventDefault();
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+  var texte = $('#message').val();
+  var ressource =$("#ressource").val();
+  // var tip_name_input =$("#tip_name_input").val();
+  var avatar=$('#tip_file_input').val();
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+          $.ajax({
 
-const app = new Vue({
-    el: '#app',
-});
+             url:'ajax/insert',
+             data:  { texte:texte, ressource:ressource, /*nom:tip_name_input,*/ avatar:avatar},
+             method:'get',
+             success:function(reponsePHP){
+            if (reponsePHP ==1 ||1 ){
+                var code = '<div class=\"post-reply\"><div class="nom-reply-post">'+texte+'</div><div>'+avatar+'</div></div>';
+              $('#liste').append(code).find('li:first').hide().slideDown();
+            };
+          },
+
+             error: function(){
+               alert("Problème durant la transaction !");
+             }
+
+          });
+    });
+})
+
+/*<div class=\"text-reply-post">'+tip_name_input+'</div>*/

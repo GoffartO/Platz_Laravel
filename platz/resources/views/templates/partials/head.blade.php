@@ -20,6 +20,5 @@
   <link href='{{ asset('css/style.css')}}' rel='stylesheet' type='text/css'>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href='{{ asset('css/details.css')}}' rel='stylesheet' type='text/css'>
-  <script src="{{ asset('js/app.js') }}"></script>
 
 </head>

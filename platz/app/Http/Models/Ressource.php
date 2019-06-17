@@ -16,4 +16,8 @@
         public function categories(){
           return $this->belongsTo('\App\Categorie', 'categorie');
         }
+
+        public function commentaires(){
+        return $this->hasMany('\App\Commentaire', 'ressource');
+      }
    }

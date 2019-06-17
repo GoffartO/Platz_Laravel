@@ -35,3 +35,7 @@ Auth::routes();
 View::composer(['categories.menu','categories.menuIcon'], function($view){
   $view->with('categories', App\Http\Models\Categorie::all());
 });
+
+// ROUTE COMMENTAIRE
+Route::get('/commentaires/form', 'CommentairesController@index')->name('commentaires.form');
+Route::get('/ajax/insert', 'CommentairesController@ajaxInsert')->name('ajax.insert');
