@@ -8,11 +8,6 @@
 
    class NewslettersController extends Controller{
 
-     public function create(){
-
-       return view('newsletters.create');
-     }
-
        public function store(Request $request)
        {
           $validatedData = $request->validate([

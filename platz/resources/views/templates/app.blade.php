@@ -20,6 +20,7 @@
 
         <!-- CONTENU -->
         <main>
+          @include('request')
           @include('flash')
           @section('contenu')
           @show
